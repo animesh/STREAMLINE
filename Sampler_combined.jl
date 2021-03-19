@@ -69,6 +69,14 @@ end
 # α_ins= 2:.5:10
 # α_out= 2:.5:10
 
-### Scale-free
+### Small-world
 # betas = 0.1:0.1:0.9
 # N_sdegrees = N_nodes.*[0.1:0.1:0.9]
+
+
+
+### Simple examples
+ER_sample(1500,30000)
+scale_free_sample([1500],[30000],[2.],[7.5])
+small_world_sample([1500],[20],[.5])
+semi_scale_free([1500],[30000],[7.5],.7)
