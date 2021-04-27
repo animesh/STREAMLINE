@@ -1,5 +1,5 @@
 # GRNInferenceBenchmarking
 
-- Beeline expansion: Network analysis integration in BEELINE
+- Beeline expansion: Network analysis scripts for the integration with BEELINE
 - snetwork sampling: Network sampling scripts that create the input for BoolODE
-- results: plots
+- results: first plots
