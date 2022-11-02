@@ -130,13 +130,16 @@ def Hubs(datasetDict, inputSettings):
                 rd_vals = np.zeros(6)
                 mapping = {0: "g1", 1: "g2", 2: "g3", 3: "g4", 4: "g5", 5: "g6", 6: "g7", 7: "g8", 8: "g9", 9: "g10", 10: "g1", 11: "g12", 12: "g13", 13: "g4", 14: "g15"}
 
-                for j in range(0,29):
+		# This is the statistical approach to calculating the expected jaccard coefficient of a random predictor
+		# Here we use the output statistic with N=300 samples 
+		# For the results in the paper we used an exact formula for the expected value, this approach here is to check whether the formula holds true
+                for j in range(0,299):
                     rGr = nx.gnm_random_graph(numNodes, numEdges, directed=False)
                     rGrd = nx.gnm_random_graph(numNodes, numEdges, directed=True)
                     rGr = nx.relabel_nodes(rGr, mapping)
                     rGrd = nx.relabel_nodes(rGrd, mapping)
-                    r_vals = r_vals+1/30*np.array(Hubs_undirected(rGr,refGraph))
-                    rd_vals = rd_vals+1/30*np.array(Hubs_directed(rGrd,refGraph))
+                    r_vals = r_vals+1/300*np.array(Hubs_undirected(rGr,refGraph))
+                    rd_vals = rd_vals+1/300*np.array(Hubs_directed(rGrd,refGraph))
                     # rcc, rg_eff, rl_eff, rnc, rsp, rass, rds, rds, rcentr, rcentr, rh_jac, rd_jac = rcc, rg_eff, rl_eff, rnc, rsp, rass, rds, rds, rcentr, rcentr, rh_jac, rd_jac + getTopProp_undirected(rGr,refGraph)*1/10
                     # rdcc, rdg_eff, rdl_eff, rdnc, rdsp, rdass, rdds, rdds, rdcentr, rdcentr, rdh_jac, rdd_jac = rdcc, rdg_eff, rdl_eff, rdnc, rdsp, rdass, rdds, rdds, rdcentr, rdcentr, rdh_jac, rdd_jac + getTopProp_directed(rGrd,refGraph)*1/10
 
