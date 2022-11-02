@@ -341,7 +341,7 @@ function BoolODE_textfiles_directed_random(directory)
     writedlm("Autoregulation_direction_probs.csv",pas_direction)
 end
 
-BoolODE_textfiles_directed("C:/Users/Niclas Popp/Documents/Niclas/Studium/8. SS 21/Helmholtz/Julia/samples/temp/",.5)
-BoolODE_textfiles("C:/Users/Niclas Popp/Documents/Niclas/Studium/8. SS 21/Helmholtz/Julia/samples/temp/")
-BoolODE_textfiles_directed_random("C:/Users/Niclas Popp/Documents/Niclas/Studium/8. SS 21/Helmholtz/Julia/samples/Samples_1/small_world/adjacency_matrices/")
-BoolODE_textfiles_directed_random("C:/Users/Niclas Popp/Documents/Niclas/Studium/8. SS 21/Helmholtz/Julia/samples/temp/")
+BoolODE_textfiles_directed("/your_path",.5)
+BoolODE_textfiles("/your_path")
+BoolODE_textfiles_directed_random("/your_path")
+BoolODE_textfiles_directed_random("/your_path")
