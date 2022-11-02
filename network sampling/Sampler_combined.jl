@@ -76,48 +76,21 @@ end
 
 
 ####### Parameter ranges:
-### TOO LARGE:
-# N_nodes = 500:500:6000
-# N_edges = 10000:10000:100000
+# Set them as desired
+# N_nodes = 
+# N_edges = 
 
 ### Scale-free
-# α_ins= 2:.5:10
+# α_ins= 
 # α_out= 2:.5:10
 
 ### Small-world
-# betas = 0.1:0.1:0.9
-# N_sdegrees = N_nodes.*[0.1:0.1:0.9]
-
-
-### Large enough:
-#[20 50 100 200]
-# N_nodes = [10 20 50 100]
-N_nodes = [25]
-N_edges = [100 200]
-# N_edges = [50 100 200 500 1000 2000]
-#[50 100 200 500 1000 2000]
-
-### Scale-free
-α_ins= float.(Array(2:4:10))
-α_out= float.(Array(2:4:10))
-
-### Small-world
-betas = 0.1:0.4:0.9
-N_sdegrees = N_nodes.*[0.1:0.4:0.9]
-
-
-
-### Simple examples
-# ER_sample(1500,30000)
-# scale_free_sample([50],[300],[2.],[7.5])
-# small_world_sample([1500],[20],[.5])
-# semi_scale_free([50],[150],[7.5],.5)
-
+# betas = 
+# N_sdegrees = 
 
 ### Using the intervals given above
-
-ER_sample([15],[50],20)
+#ER_sample(,,)
 #scale_free_sample(N_nodes,N_edges,α_ins,α_out)
-semi_scale_free([15],[50],[2.],.5,5)
-small_world_sample([15],[3],[.8],5)
-scale_free_sample([15],[50],[8.],[8.],5)
+#semi_scale_free(,,,,)
+#small_world_sample(,,,)
+#scale_free_sample(,,,,)
