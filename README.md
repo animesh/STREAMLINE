@@ -2,6 +2,8 @@
 
 STREAMLINE is a refined benchmarking strategy for GRN Inference Algorithms that focuses on the preservation of topological graph properties as well as the identification of hubs. This repository contains all the necessary files that are necessary to perform the analysis. The implementation is compatible with BEELINE. We suggest to set up BEELINE first and then proceed with the steps described below.
 
+![plot](./images/schematic.pdf)
+
 ## Step 1: Network Sampline
 The folder "network sampling" contains the Julia code that was used to sample the parameter controlled artifical ground truth networks. The exact values of the parameters can be chosen by the user. After the networks sampleing the output can be translated to input files for BoolODE, which can be used to sample the transcriptomic data.
 
