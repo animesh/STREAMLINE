@@ -8,5 +8,5 @@ The folder "network sampling" contains the Julia code that was used to sample th
 ## Step 2: GRN Inference
 The second step involves the inference of the gene regulatory networks using the data generated in step 1. The computations can be performed as required by the algorithm that should be benchmarked.
 
-## Step 2: Benchmarking
+## Step 3: Benchmarking
 The benchmarking scripts are implemented as an extension to BEELINE. The files contained in the folder have to be stored as described in the [developer guide for BEELINE](https://murali-group.github.io/Beeline/BEELINE.html#adding-a-new-evaluation-technique) and then can be triggered within the pipeline. However, the analysis can be performed outside of BEELINE as well by extracting the relevant methods. 
